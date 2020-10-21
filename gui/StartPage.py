@@ -1,10 +1,11 @@
 import platform
-from tkinter import ttk, Scrollbar, Frame, Text, Label, font
-from .ResizableCanvas import ResizableCanvas
-from fs.load_image import load_tk_image_from_bytes_array, load_image_object_from_bytes_array
 from PIL import Image, ImageTk
+from tkinter import ttk, Scrollbar, Frame, Text, Label, font
+from fs.load_image import load_tk_image_from_bytes_array, load_image_object_from_bytes_array
+from .ResizableCanvas import ResizableCanvas
 from.AppPage import AppPage
-class StartPage(ttk.Frame):
+
+class StartPage(Frame):
 	def __init__(self, controller, *args, **kwargs):
 		ttk.Frame.__init__(self, *args, **kwargs)
 		self.controller = controller
